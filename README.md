@@ -33,3 +33,7 @@ Dec 2, 2019
 #### Data Split
 
 * We randomly split our annotated data into training (60%), development (20%), and test sets (20%).
+
+#### Format
+
+* We provide two kinds of format, one is ".txt" for LSTM-based models, and another is ".tsv" for BERT models.
