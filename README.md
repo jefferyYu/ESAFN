@@ -1,8 +1,8 @@
 # ESAFN
-Dataset and codes for our TASLP 2020 paper "Entity-Sensitive Attention and Fusion Network for Entity-Level Multimodal Sentiment Classification".
+Dataset and codes for our paper "Entity-Sensitive Attention and Fusion Network for Entity-Level Multimodal Sentiment Classification".
 
 ## Paper:
-Entity-Sensitive Attention and Fusion Network for Entity-Level Multimodal Sentiment Classification. Jianfei Yu, Jing Jiang, and Rui Xia. Accepted by TASLP 2020.
+Entity-Sensitive Attention and Fusion Network for Entity-Level Multimodal Sentiment Classification. Jianfei Yu, Jing Jiang, and Rui Xia. Accepted by IEEE/ACM TASLP 2020.
 
 Author
 
