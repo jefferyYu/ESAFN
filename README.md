@@ -13,7 +13,7 @@ jfyu.2014@phdis.smu.edu.sg
 Dec 2, 2019
 
 ## Code:
-- We will clean up our codes and release it soon.
+- We will clean up our codes and release it soon. Currently, you may first refer to our TomBERT model (https://github.com/jefferyYu/TomBERT), which is based on BERT and has much better performance than ESAFN on the two multimodal datasets.
 
 ## Data:
 - Download multimodal data via this link (https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
