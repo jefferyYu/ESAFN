@@ -15,25 +15,26 @@ Dec 2, 2019
 ## Code:
 - We will clean up our codes and release it soon. Currently, you may first refer to our TomBERT model (https://github.com/jefferyYu/TomBERT), which is based on BERT and has much better performance than ESAFN on the two multimodal datasets.
 
-## Data:
-- Download multimodal data via this link (https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
+## Requirement
 
-### Textual Content for Each Tweet
+* PyTorch 1.0.0
+* Python 3.7
 
-* Under the folder "twitter2015"
-* Under the folder "twitter2017"
 
-### Visual Content for Each Tweet
+## Download tweet images and set up image path
+- Step 1: Download each tweet's associated image via this link (https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
+- Step 2: Change the image path in line 468 and line 472 of the "train.py" file
+- Step 3: Download the pre-trained ResNet-152 via this link (https://download.pytorch.org/models/resnet152-b121ed2d.pth)
+- Setp 4: Put the pre-trained ResNet-152 model under the folder named "resnet"
+- Setp 5: Change the Glove word embedding path in line 30 of the "data_utils.py" file
 
-* Under the folder "twitter2015_images"
-* Under the folder "twitter2017_images"
+## Code Usage
 
-### Description
+### Training for ESAFN
+- This is the training code of tuning parameters on the dev set, and testing on the test set. Note that you can change "CUDA_VISIBLE_DEVICES=0" based on your available GPUs.
 
-#### Data Split
+```sh
+sh run.sh
+```
 
-* We randomly split our annotated data into training (60%), development (20%), and test sets (20%).
-
-#### Format
-
-* We provide two kinds of format, one is ".txt" for LSTM-based models, and another is ".tsv" for BERT models.
+- To show the running process, we show our running logs in the "twitter_log.txt" and the "twitter2015_log.txt".
