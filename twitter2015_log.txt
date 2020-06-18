@@ -1,0 +1,163 @@
+************no tfn layer************
+> training arguments:
+>>> rand_seed: 25
+>>> model_name: mmfusion
+>>> dataset: twitter2015
+>>> optimizer: <class 'torch.optim.adam.Adam'>
+>>> initializer: <function xavier_uniform_ at 0x7fd0b83c0840>
+>>> learning_rate: 0.001
+>>> dropout_rate: 0.5
+>>> num_epoch: 8
+>>> batch_size: 10
+>>> log_step: 50
+>>> logdir: log
+>>> embed_dim: 100
+>>> hidden_dim: 100
+>>> max_seq_len: 24
+>>> polarities_dim: 3
+>>> hops: 3
+>>> att_file: ./att_file/
+>>> pred_file: ./pred_file/
+>>> clip_grad: 5.0
+>>> path_image: ./twitter15_images/
+>>> crop_size: 224
+>>> fine_tune_cnn: False
+>>> att_mode: vis_concat_attimg_gate
+>>> resnet_root: ./resnet
+>>> checkpoint: ./checkpoint/
+>>> load_check_point: False
+>>> load_opt: False
+>>> tfn: False
+>>> model_class: <class 'models.mmfusion.MMFUSION'>
+>>> inputs_cols: ['text_left_indicator', 'text_right_indicator', 'aspect_indices']
+>>> device: cuda
+preparing twitter2015 dataset...
+loading word vectors...
+building embedding_matrix: 100_twitter2015_embedding_matrix.dat
+--------------./datasets/twitter2015/train.txt---------------
+the number of problematic samples: 82
+--------------./datasets/twitter2015/dev.txt---------------
+the number of problematic samples: 30
+--------------./datasets/twitter2015/test.txt---------------
+the number of problematic samples: 27
+building model
+n_trainable_params: 1200104, n_nontrainable_params: 1290400
+parameters only include text parts without word embeddings
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  0
+loss: 1.2744, acc: 0.5923, dev_acc: 0.5971, test_acc: 0.5853
+dev_f1: 0.2493, test_f1: 0.2461
+loss: 0.9117, acc: 0.6282, dev_acc: 0.6275, test_acc: 0.6220
+dev_f1: 0.4281, test_f1: 0.4240
+loss: 0.8224, acc: 0.6669, dev_acc: 0.6569, test_acc: 0.6509
+dev_f1: 0.4375, test_f1: 0.4388
+loss: 0.3444, acc: 0.6870, dev_acc: 0.6586, test_acc: 0.6779
+dev_f1: 0.4439, test_f1: 0.4620
+loss: 0.6067, acc: 0.6977, dev_acc: 0.6640, test_acc: 0.6837
+dev_f1: 0.5175, test_f1: 0.6040
+loss: 0.9913, acc: 0.7037, dev_acc: 0.6693, test_acc: 0.6808
+dev_f1: 0.5309, test_f1: 0.5481
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  1
+loss: 0.5398, acc: 0.7137, dev_acc: 0.6738, test_acc: 0.6885
+dev_f1: 0.5419, test_f1: 0.5913
+loss: 0.8189, acc: 0.7197, dev_acc: 0.6542, test_acc: 0.6933
+dev_f1: 0.5618, test_f1: 0.6043
+loss: 0.5725, acc: 0.7285, dev_acc: 0.6578, test_acc: 0.6953
+dev_f1: 0.5924, test_f1: 0.6256
+loss: 1.0098, acc: 0.7392, dev_acc: 0.6729, test_acc: 0.7088
+dev_f1: 0.5657, test_f1: 0.6320
+loss: 0.5118, acc: 0.7436, dev_acc: 0.6774, test_acc: 0.6943
+dev_f1: 0.5961, test_f1: 0.6160
+loss: 0.6676, acc: 0.7634, dev_acc: 0.6925, test_acc: 0.7175
+dev_f1: 0.6066, test_f1: 0.6387
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  2
+loss: 0.8184, acc: 0.7644, dev_acc: 0.6791, test_acc: 0.7059
+dev_f1: 0.5863, test_f1: 0.6278
+loss: 0.5662, acc: 0.7568, dev_acc: 0.6907, test_acc: 0.6914
+dev_f1: 0.5960, test_f1: 0.6017
+loss: 0.4204, acc: 0.7694, dev_acc: 0.6863, test_acc: 0.6962
+dev_f1: 0.6093, test_f1: 0.6279
+loss: 0.6147, acc: 0.7924, dev_acc: 0.6783, test_acc: 0.7165
+dev_f1: 0.6070, test_f1: 0.6414
+loss: 0.8194, acc: 0.8031, dev_acc: 0.6881, test_acc: 0.7155
+dev_f1: 0.6082, test_f1: 0.6365
+loss: 0.5262, acc: 0.8091, dev_acc: 0.6809, test_acc: 0.7146
+dev_f1: 0.5926, test_f1: 0.6411
+loss: 0.9701, acc: 0.8131, dev_acc: 0.6961, test_acc: 0.7078
+dev_f1: 0.6100, test_f1: 0.6272
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  3
+loss: 1.2300, acc: 0.7886, dev_acc: 0.6747, test_acc: 0.6962
+dev_f1: 0.5804, test_f1: 0.6227
+loss: 0.5180, acc: 0.8150, dev_acc: 0.6881, test_acc: 0.6982
+dev_f1: 0.5966, test_f1: 0.6148
+loss: 0.2172, acc: 0.8210, dev_acc: 0.6720, test_acc: 0.6905
+dev_f1: 0.5945, test_f1: 0.6101
+loss: 0.9689, acc: 0.8144, dev_acc: 0.6961, test_acc: 0.6972
+dev_f1: 0.6072, test_f1: 0.6095
+loss: 0.3260, acc: 0.8257, dev_acc: 0.6791, test_acc: 0.7088
+dev_f1: 0.5887, test_f1: 0.6316
+loss: 0.4592, acc: 0.8415, dev_acc: 0.6889, test_acc: 0.7232
+dev_f1: 0.5982, test_f1: 0.6384
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  4
+loss: 0.5149, acc: 0.8506, dev_acc: 0.6979, test_acc: 0.7059
+dev_f1: 0.6147, test_f1: 0.6296
+loss: 0.7023, acc: 0.8537, dev_acc: 0.6889, test_acc: 0.7107
+dev_f1: 0.6042, test_f1: 0.6293
+loss: 0.2362, acc: 0.8487, dev_acc: 0.6747, test_acc: 0.7020
+dev_f1: 0.5816, test_f1: 0.6182
+loss: 0.2738, acc: 0.8663, dev_acc: 0.6729, test_acc: 0.6818
+dev_f1: 0.6011, test_f1: 0.6057
+loss: 0.4408, acc: 0.8493, dev_acc: 0.6622, test_acc: 0.6905
+dev_f1: 0.5570, test_f1: 0.6129
+loss: 0.2860, acc: 0.8798, dev_acc: 0.6613, test_acc: 0.6885
+dev_f1: 0.5933, test_f1: 0.6147
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  5
+loss: 0.2230, acc: 0.8786, dev_acc: 0.7032, test_acc: 0.7232
+dev_f1: 0.6157, test_f1: 0.6456
+loss: 0.4083, acc: 0.8701, dev_acc: 0.6756, test_acc: 0.7001
+dev_f1: 0.5709, test_f1: 0.6072
+loss: 0.2865, acc: 0.8890, dev_acc: 0.6711, test_acc: 0.6721
+dev_f1: 0.6015, test_f1: 0.6145
+loss: 0.3090, acc: 0.9044, dev_acc: 0.6711, test_acc: 0.6953
+dev_f1: 0.6006, test_f1: 0.6380
+loss: 0.5182, acc: 0.9085, dev_acc: 0.6738, test_acc: 0.7078
+dev_f1: 0.5935, test_f1: 0.6415
+loss: 0.4973, acc: 0.9031, dev_acc: 0.6827, test_acc: 0.7030
+dev_f1: 0.5818, test_f1: 0.6145
+loss: 0.7150, acc: 0.9185, dev_acc: 0.6854, test_acc: 0.6982
+dev_f1: 0.6088, test_f1: 0.6331
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  6
+loss: 0.0787, acc: 0.9299, dev_acc: 0.6720, test_acc: 0.6856
+dev_f1: 0.5735, test_f1: 0.6002
+loss: 0.2816, acc: 0.8993, dev_acc: 0.6248, test_acc: 0.6490
+dev_f1: 0.5702, test_f1: 0.6016
+loss: 0.6618, acc: 0.9336, dev_acc: 0.6872, test_acc: 0.6943
+dev_f1: 0.5913, test_f1: 0.6126
+loss: 0.1328, acc: 0.9267, dev_acc: 0.6774, test_acc: 0.6818
+dev_f1: 0.5990, test_f1: 0.6124
+loss: 0.1149, acc: 0.9431, dev_acc: 0.6720, test_acc: 0.7088
+dev_f1: 0.5775, test_f1: 0.6167
+loss: 0.3837, acc: 0.9446, dev_acc: 0.6702, test_acc: 0.7040
+dev_f1: 0.5777, test_f1: 0.6250
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+epoch:  7
+loss: 0.0453, acc: 0.9528, dev_acc: 0.6676, test_acc: 0.6953
+dev_f1: 0.5773, test_f1: 0.6138
+loss: 0.0768, acc: 0.9519, dev_acc: 0.6702, test_acc: 0.6982
+dev_f1: 0.5880, test_f1: 0.6260
+loss: 0.1042, acc: 0.9361, dev_acc: 0.6747, test_acc: 0.7011
+dev_f1: 0.5953, test_f1: 0.6278
+loss: 0.0771, acc: 0.9522, dev_acc: 0.6399, test_acc: 0.6750
+dev_f1: 0.5725, test_f1: 0.6136
+loss: 0.2363, acc: 0.9465, dev_acc: 0.6310, test_acc: 0.6808
+dev_f1: 0.5693, test_f1: 0.6289
+loss: 0.0597, acc: 0.9475, dev_acc: 0.6676, test_acc: 0.6962
+dev_f1: 0.5726, test_f1: 0.6180
+max_dev_acc: 0.7032085561497327, test_acc: 0.7232401157184185
+dev_p: 0.6531976815883586, dev_r: 0.5822218563637391, dev_f1: 0.6156709604532914, test_p: 0.6904977347016921, test_r: 0.6061907580281913, test_f1: 0.6456035471315958
